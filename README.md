@@ -3,10 +3,10 @@
 This assignment required me to create an application which would allow a user to create a random password based on the following selections/parameters:
 
 - Password length of 8-128 characters
-- choice to include:
-    -upper case letters
-    -lower chase letters
-    -numbers
+- choice to include:<br>
+    -upper case letters<br>
+    -lower chase letters<br>
+    -numbers<br>
     -special characters
 
 I completed this assignment with starter code which included the html, css, and javascript files. However, I only had to modify the javascript files in order to complete the assignment. 
