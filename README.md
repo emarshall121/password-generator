@@ -5,7 +5,7 @@ This assignment required me to create an application which would allow a user to
 - Password length of 8-128 characters
 - choice to include:<br>
     -upper case letters<br>
-    -lower chase letters<br>
+    -lower case letters<br>
     -numbers<br>
     -special characters
 
