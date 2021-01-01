@@ -1,5 +1,3 @@
-// Assignment code here
-
 //possible password values
 var upperCaseValues = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var lowerCaseValues = 'abcdefghijklmnopqrstuvwxyz';
@@ -7,13 +5,13 @@ var numberValues = '0123456789';
 var specialCharValues = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
 
 var generatePassword = function() {
+
   //Determine user's preference for the number of characters included in password
   var length = "";
 
   while (length == "" || length == null || length <= 7 || length > 128) {
     length = prompt("Caution: Your password must be between 8 and 128 characters. Choose a valid password length.")
   }
-  console.log(length);
 
   //Determine user's preference for characters included in password
   var lowerCase = confirm("Would you like to include lower case letters? Choose OK for yes or CANCEL for no.");
@@ -28,13 +26,8 @@ var generatePassword = function() {
     numbers = confirm("Would you like to include numbers? Choose OK for yes or CANCEL for no.");
     special = confirm("Would you like to include special characters? Choose OK for yes or CANCEL for no.");
   }
-  console.log(lowerCase);
-  console.log(upperCase);
-  console.log(numbers);
-  console.log(special);
 
   //Create list of characters to include in password based on user's selections
-
   var characters = ""
 
     if(lowerCase) {
@@ -52,15 +45,12 @@ var generatePassword = function() {
     if(special) {
       characters = characters.concat(specialCharValues)
     }
-    console.log(characters);
 
-  //choose password characters based on length provided by user
-
+  //Choose password characters based on length provided by user
   var passwordString = ""
-  
+
   for(var i=0; i <= length-1; i++){
     passwordString = passwordString + characters[Math.floor(Math.random() * Math.floor(characters.length -1))];
-    console.log(passwordString);
   }
   return passwordString;
 }
