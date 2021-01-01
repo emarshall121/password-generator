@@ -55,11 +55,14 @@ var generatePassword = function() {
     console.log(characters);
 
   //choose password characters based on length provided by user
+
+  var passwordString = ""
+  
   for(var i=0; i <= length-1; i++){
-    password = characters[Math.floor(Math.random() * Math.floor(length.length -1))];
-    console.log(password);
+    passwordString = passwordString + characters[Math.floor(Math.random() * Math.floor(characters.length -1))];
+    console.log(passwordString);
   }
-  return password;
+  return passwordString;
 }
 
 // Get references to the #generate element
