@@ -1,4 +1,4 @@
-# password-generator
+# Password Generator - Javascript Assignment
 
 This assignment required me to create an application which would allow a user to create a random password based on the following selections/parameters:
 
