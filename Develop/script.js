@@ -28,10 +28,35 @@ var generatePassword = function() {
     numbers = confirm("Would you like to include numbers? Choose OK for yes or CANCEL for no.");
     special = confirm("Would you like to include special characters? Choose OK for yes or CANCEL for no.");
   }
+  console.log(lowerCase);
+  console.log(upperCase);
+  console.log(numbers);
+  console.log(special);
+
+  //Create list of characters to include in password based on user's selections
+
+  var characters = ""
+
+    if(lowerCase) {
+      characters = characters.concat(lowerCaseValues)
+    }
+
+    if(upperCase) {
+      characters = characters.concat(upperCaseValues)
+    }
+
+    if(numbers) {
+      characters = characters.concat(numberValues)
+    }
+
+    if(special) {
+      characters = characters.concat(specialCharValues)
+    }
+    console.log(characters);
 
   //choose password characters based on length provided by user
-  for(var i=0; i <= length; i++){
-    password = password+values.charAt(Math.floor(Math.random() * Math.floor(length.length -1)));
+  for(var i=0; i <= length-1; i++){
+    password = characters[Math.floor(Math.random() * Math.floor(length.length -1))];
     console.log(password);
   }
   return password;
