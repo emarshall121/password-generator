@@ -7,28 +7,28 @@ var specialCharValues = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
 var generatePassword = function() {
 
   //Determine user's preference for the number of characters included in password
-  var length = "";
+  var length = '';
 
-  while (length == "" || length == null || length <= 7 || length > 128) {
-    length = prompt("Caution: Your password must be between 8 and 128 characters. Choose a valid password length.")
+  while (length == '' || length == null || length <= 7 || length > 128) {
+    length = prompt('Caution: Your password must be between 8 and 128 characters. Choose a valid password length.')
   }
 
   //Determine user's preference for characters included in password
-  var lowerCase = confirm("Would you like to include lower case letters? Choose OK for yes or CANCEL for no.");
-  var upperCase = confirm("Would you like to include upper case letters? Choose OK for yes or CANCEL for no.");
-  var numbers = confirm("Would you like to include numbers? Choose OK for yes or CANCEL for no.");
-  var special = confirm("Would you like to include special characters? Choose OK for yes or CANCEL for no.");
+  var lowerCase = confirm('Would you like to include lower case letters? Choose OK for yes or CANCEL for no.');
+  var upperCase = confirm('Would you like to include upper case letters? Choose OK for yes or CANCEL for no.');
+  var numbers = confirm('Would you like to include numbers? Choose OK for yes or CANCEL for no.');
+  var special = confirm('Would you like to include special characters? Choose OK for yes or CANCEL for no.');
 
   while (lowerCase == false && upperCase == false && numbers == false && special == false) {
-    alert("Caution: You must choose at least one parameter for your password. Please try again.");
-    lowerCase = confirm("Would you like to include lower case letters? Choose OK for yes or CANCEL for no.");
-    upperCase = confirm("Would you like to include upper case letters? Choose OK for yes or CANCEL for no.");
-    numbers = confirm("Would you like to include numbers? Choose OK for yes or CANCEL for no.");
-    special = confirm("Would you like to include special characters? Choose OK for yes or CANCEL for no.");
+    alert('Caution: You must choose at least one parameter for your password. Please try again.');
+    lowerCase = confirm('Would you like to include lower case letters? Choose OK for yes or CANCEL for no.');
+    upperCase = confirm('Would you like to include upper case letters? Choose OK for yes or CANCEL for no.');
+    numbers = confirm('Would you like to include numbers? Choose OK for yes or CANCEL for no.');
+    special = confirm('Would you like to include special characters? Choose OK for yes or CANCEL for no.');
   }
 
   //Create list of characters to include in password based on user's selections
-  var characters = ""
+  var characters = ''
 
     if(lowerCase) {
       characters = characters.concat(lowerCaseValues)
@@ -47,7 +47,7 @@ var generatePassword = function() {
     }
 
   //Choose password characters based on length provided by user
-  var passwordString = ""
+  var passwordString = ''
 
   for(var i=0; i <= length-1; i++){
     passwordString = passwordString + characters[Math.floor(Math.random() * Math.floor(characters.length -1))];
