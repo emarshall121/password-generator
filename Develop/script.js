@@ -19,7 +19,7 @@ var generatePassword = function() {
   var numbers = confirm('Would you like to include numbers? Choose OK for yes or CANCEL for no.');
   var special = confirm('Would you like to include special characters? Choose OK for yes or CANCEL for no.');
 
-  while (lowerCase == false && upperCase == false && numbers == false && special == false) {
+  while (!lowerCase && !upperCase && !numbers && !special) {
     alert('Caution: You must choose at least one parameter for your password. Please try again.');
     lowerCase = confirm('Would you like to include lower case letters? Choose OK for yes or CANCEL for no.');
     upperCase = confirm('Would you like to include upper case letters? Choose OK for yes or CANCEL for no.');
